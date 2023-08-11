@@ -17,6 +17,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/", (req, res, next) => {
+  res.send("Hello from the server");
+});
+
 app.use(paymentRoutes);
 app.use(planRoutes);
 app.use("/auth", authRoutes);
